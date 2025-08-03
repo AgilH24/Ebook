@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <h2>Kitap Ekle</h2>
+    <form id="bookForm">
+        <label>Kitap İsmi:</label>
+        <input type="text" id="bookName" required />
+
+        <label>Dil:</label>
+        <input type="text" id="bookLanguage" required />
+
+        <label>Görsel URL (Opsiyonel):</label>
+        <input type="text" id="bookImage" />
+
+        <label>YA DA Görsel Seç (Opsiyonel):</label>
+        <input type="file" id="bookImageFile" accept="image/*" />
+        <img id="preview" style="max-width:150px; display:none; margin-top:10px;" />
+
+        <label>Metin İçeriği:</label>
+        <textarea id="bookContent" rows="6" required></textarea>
+
+        <button type="submit">Kitap Ekle</button>
+    </form>
+<ul id="bookList"></ul>
+
+
+    <h3>Eklenen Kitaplar</h3>
+    <ul id="bookList"></ul>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+<footer style="text-align:center; margin-top:40px;">
+  <a href="index.html">📚 Ana Sayfa</a> |
+  <a href="admin.html">➕ Kitap Ekle</a> |
+  <a href="edit.html">✏️ Kitapları Düzenle</a>
+</footer>
+
+</html>

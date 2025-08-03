@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kitap Güncelle</title>
+  <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Kitapları Güncelle</h2>
+    <select id="bookSelect">
+      <option value="">Bir kitap seçin</option>
+    </select>
+
+    <form id="editForm" style="display:none;">
+      <label>Kitap İsmi:</label>
+      <input type="text" id="editName">
+
+      <label>Dil:</label>
+      <input type="text" id="editLanguage">
+
+      <label>Görsel URL:</label>
+      <input type="text" id="editImage">
+
+      <label>Metin İçeriği:</label>
+      <textarea id="editContent" rows="20"></textarea>
+
+      <button type="submit">Güncelle</button>
+    </form>
+  </div>
+
+  <script src="edit.js"></script>
+</body>
+<footer style="text-align:center; margin-top:40px;">
+  <a href="index.html">📚 Ana Sayfa</a> |
+  <a href="admin.html">➕ Kitap Ekle</a> |
+  <a href="edit.html">✏️ Kitapları Düzenle</a>
+</footer>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<title>Dictionary - Toplu Çeviri Ekle</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  ul { list-style: none; padding: 0; }
+  li { margin-bottom: 8px; }
+  #bulkPanel {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+  }
+  #bulkPanel textarea {
+    width: 100%;
+    height: 150px;
+    font-family: monospace;
+  }
+  #bulkPanel button {
+    margin-top: 10px;
+    padding: 6px 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Sözlük</h1>
+
+<div>
+  <button onclick="showWordsWithTranslation()">✅ Çevirisi Olanlar</button>
+  <button onclick="showWordsWithoutTranslation()">❌ Çevirisi Olmayanlar</button>
+  <button onclick="copyWordsWithoutTranslation()">📋 Eksik Kelimeleri Kopyala</button>
+  <button onclick="showBulkPanel()">📝 Toplu Çeviri Ekle</button>
+</div>
+
+<ul id="dictionaryList"></ul>
+
+<div id="bulkPanel">
+  <h2>Toplu Çeviri Ekle / Güncelle</h2>
+  <p>JSON formatında çeviri verilerini buraya yapıştırın ve Kaydet'e basın.</p>
+  <textarea id="bulkInput" placeholder='{
+  "был": {
+    "base": "быть",
+    "translation": "was",
+    "type": "verb",
+    "tense": "past",
+    "person": "3rd singular",
+    "structure": "б (root) + ы(е) + л (past suffix)",
+    "example": "Он был дома. (He was at home.)"
+  }
+}'></textarea>
+  <br />
+  <button onclick="saveBulkTranslations()">Kaydet</button>
+  <button onclick="hideBulkPanel()">İptal</button>
+  <p id="bulkStatus"></p>
+</div>
+
+  <script src="dictionary.js"></script>
+</body>
+</html>
